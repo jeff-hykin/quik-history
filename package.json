@@ -1,20 +1,23 @@
 {
-  "name": "quik-history",
-  "version": "1.0.0",
-  "description": "A plug-in for quick server that makes it easy to manage history for single-page-apps",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeff-hykin/quik-history.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jeff-hykin/quik-history/issues"
-  },
-  "homepage": "https://github.com/jeff-hykin/quik-history#readme"
+    "name": "quik-history",
+    "version": "1.0.1",
+    "description": "A plug-in for quick server that makes it easy to manage history for single-page-apps",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jeff-hykin/quik-history.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jeff-hykin/quik-history/issues"
+    },
+    "homepage": "https://github.com/jeff-hykin/quik-history#readme",
+    "dependencies": {
+        "quik-server": "^1.1.0"
+    }
 }

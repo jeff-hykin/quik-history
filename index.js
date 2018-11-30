@@ -20,5 +20,5 @@ module.exports = thisModule = {
             }
         })
     },
-    generateFrontend : (server) => `${thisModule.frontend}`,
+    generateFrontend : (server) => `(${thisModule.frontend})()`,
 }
