@@ -3,18 +3,24 @@ module.exports = thisModule = {
     frontend : () => {
         Object.defineProperty(history, "loadPage", {
             get: function() { 
-                return (path) => {
-                    this.pushState({url:path},"",path)
-                    this.shallowLoad(path)
+                return (path,...args) => {
+                    if (path == null) {
+                        // removes the slash at the front
+                        path = window.location.pathname.replace(/^\//,"")
+                    }
+                    this.pushState({url:path, args},"",path)
+                    this.loadWithoutAddingToHistory(path, ...args)
                 }
             },
             set: function (newValue) {
-                this.shallowLoad = newValue
+                this.loadWithoutAddingToHistory = newValue
                 // add the listener if it hasnt been added
                 if (!this.loadPageListenerIsSet) {
                     this.loadPageListenerIsSet = true
                     window.addEventListener("popstate", (e)=> {
-                        this.shallowLoad(e.state.url)
+                        if (e.state != null) {
+                            this.loadWithoutAddingToHistory(e.state.url, ...e.state.args)
+                        }
                     })
                 }
             }

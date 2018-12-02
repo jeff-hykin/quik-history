@@ -18,6 +18,5 @@
     },
     "homepage": "https://github.com/jeff-hykin/quik-history#readme",
     "dependencies": {
-        "quik-server": "^1.1.0"
     }
 }
